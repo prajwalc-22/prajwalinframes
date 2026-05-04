@@ -131,17 +131,6 @@ filterBtns.forEach(btn => {
         item.classList.add('hidden');
       }
     });
-
-    // Handle Thumbnail Autoplay Logic
-    if (['video', 'video-edit', 'client-edit', 'web', 'ai-series', 'story-animation', 'client-story'].includes(filter)) {
-      gridVideos.forEach(vid => {
-        vid.play().catch(err => console.log("Waiting for user interaction..."));
-      }); 
-    } else {
-      gridVideos.forEach(vid => {
-        vid.load();
-      });
-    }
   });
 });
 
